@@ -15,7 +15,9 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
     
     if (tipoCombustivel === "gasolina"){
         resultado.textContent = `Você abasteceu com ${litros} litros de gasolina, o valor a pagar é : ${totalGasolina}`;
-    } else{
+    } else if (tipoCombustivel === "alcool"){
         resultado.textContent = `Você abasteceu com ${litros} litros de alcool, o valor a pagar é : ${totalAlcool}`;
+    } else {
+        resultado.textContent = "voçê escolheu um combustivel que não esta disponivel"
     }
 });
